@@ -1,9 +1,11 @@
+'use client'
+
 import React, {useState} from 'react';
 import styles from './Map.module.css'
-import {MapContainer, Marker, Popup, TileLayer, useMap} from "react-leaflet";
+import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import ChangeCenter from "@/components/map/subcomponents/ChangeCenter";
 import DetectClick from "@/components/map/subcomponents/DetectClick";
-// import DetectClick from "@/components/map/subcomponents/DetectClick";
+import {useCities} from "@/contexts/CitiesContext";
 
 const Map = () => {
   const {cities} = useCities();
@@ -33,19 +35,10 @@ const Map = () => {
         ))}
 
         <ChangeCenter position={mapPosition} />
-        {/* eslint-disable-next-line react/jsx-no-undef */}
         <DetectClick/>
       </MapContainer>
     </div>
   );
 };
-
-// function DetectClick() {
-//   const navigate = useNavigate();
-//
-//   useMapEvents({
-//     click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
-//   });
-// }
 
 export default Map;
