@@ -1,7 +1,12 @@
+import Sidebar from "@/components/sidebar/Sidebar";
+import Map from "@/components/map/Map"
+
 export default function Home() {
   return (
     <main className="">
-      Homepage
+      <Sidebar/>
+      <Map/>
+      {/*<User/>*/}
     </main>
   )
 }
