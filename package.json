@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "json-server --watch data/cities.json 8000 --delay 500"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
