@@ -3,7 +3,7 @@ import Map from "@/components/map/Map"
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="app">
       <Sidebar/>
       <Map/>
       {/*<User/>*/}
