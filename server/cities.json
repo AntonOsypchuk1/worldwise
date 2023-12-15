@@ -1,0 +1,124 @@
+{
+  "cities": [
+    {
+      "cityName": "Lisbon",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2027-10-31T15:59:59.138Z",
+      "notes": "My favorite city so far!",
+      "position": {
+        "lat": 38.727881642324164,
+        "lng": -9.140900099907554
+      },
+      "id": 73930385
+    },
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2027-07-15T08:22:53.976Z",
+      "notes": "",
+      "position": {
+        "lat": 40.46635901755316,
+        "lng": -3.7133789062500004
+      },
+      "id": 17806751
+    },
+    {
+      "cityName": "Berlin",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Amazing 😃",
+      "position": {
+        "lat": 52.53586782505711,
+        "lng": 13.376933665713324
+      },
+      "id": 98443197
+    },
+    {
+      "cityName": "Billington",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "emoji": "🇬🇧",
+      "date": "2023-10-22T10:14:08.932Z",
+      "notes": "test",
+      "position": {
+        "lat": 51.89016978575696,
+        "lng": -0.6378752119802455
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Pervomayskoye",
+      "country": "Ukraine",
+      "emoji": "🇺🇦",
+      "date": "2023-10-22T10:22:12.307Z",
+      "notes": "test",
+      "position": {
+        "lat": 45.07352060670971,
+        "lng": 35.14526367187501
+      },
+      "id": 98443204
+    },
+    {
+      "cityName": "Murzuq",
+      "country": "Libya",
+      "emoji": "🇱🇾",
+      "date": "2023-10-22T11:07:37.415Z",
+      "notes": "",
+      "position": {
+        "lat": 24.5271348225978,
+        "lng": 17.226562500000004
+      },
+      "id": 98443205
+    },
+    {
+      "cityName": "Zhytomyr",
+      "country": "Ukraine",
+      "emoji": "🇺🇦",
+      "date": "2023-10-22T11:09:18.331Z",
+      "notes": "test",
+      "position": {
+        "lat": 50.240178884797025,
+        "lng": 28.690795898437504
+      },
+      "id": 98443206
+    },
+    {
+      "cityName": "Greater London",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "emoji": "🇬🇧",
+      "date": "2023-10-22T11:15:24.028Z",
+      "notes": "test",
+      "position": {
+        "lat": 51.474540439419755,
+        "lng": -0.08239746093750001
+      },
+      "id": 98443207
+    },
+    {
+      "cityName": "Chelmsford",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "emoji": "🇬🇧",
+      "date": "2023-10-22T11:15:37.006Z",
+      "notes": "",
+      "position": {
+        "lat": 51.73383267274113,
+        "lng": 0.5548095703125001
+      },
+      "id": 98443208
+    },
+    {
+      "cityName": "Cambridge",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "emoji": "🇬🇧",
+      "date": "2023-10-22T11:19:15.031Z",
+      "notes": "",
+      "position": {
+        "lat": 52.19413974159753,
+        "lng": 0.14282226562500003
+      },
+      "id": 98443209
+    }
+  ]
+}
