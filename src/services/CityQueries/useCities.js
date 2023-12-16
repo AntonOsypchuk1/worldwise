@@ -1,5 +1,5 @@
 import {useQuery} from "@tanstack/react-query";
-import {getCities} from "worldwise/src/services/apiCities";
+import {getCities} from "@/services/apiCities";
 
 export function useCities() {
   const {isLoading, data: cities} = useQuery({
