@@ -1,12 +1,12 @@
-import Sidebar from "@/components/sidebar/Sidebar";
-import Map from "@/components/map/Map"
+'use client'
 
-export default function Home() {
-  return (
-    <main className="app">
-      <Sidebar/>
-      <Map/>
-      {/*<User/>*/}
-    </main>
-  )
+import CityList from "@/components/city/city-list/CityList";
+import {useRouter} from "next/navigation";
+
+const Home = () => {
+  const router = useRouter()
+
+  router.push('/cities');
 }
+
+export default Home;
