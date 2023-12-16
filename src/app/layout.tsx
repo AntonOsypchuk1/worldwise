@@ -1,5 +1,7 @@
 import './global.css'
 import {CitiesProvider} from "@/contexts/CitiesContext";
+import Sidebar from "@/components/sidebar/Sidebar";
+import Map from "@/components/map/Map";
 
 export const metadata = {
   title: 'Next.js',
@@ -15,7 +17,13 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <CitiesProvider>
-          {children}
+          <main className='app'>
+          <Sidebar>
+            {children}
+          </Sidebar>
+          <Map/>
+          {/*<User/>*/}
+          </main>
         </CitiesProvider>
       </body>
     </html>
