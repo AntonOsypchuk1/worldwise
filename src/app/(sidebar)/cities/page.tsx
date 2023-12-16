@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+
 import CityList from "@/components/city/city-list/CityList";
 
 const Page = () => {
