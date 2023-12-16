@@ -6,13 +6,13 @@ import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import ChangeCenter from "@/components/map/subcomponents/ChangeCenter";
 import DetectClick from "@/components/map/subcomponents/DetectClick";
 import Spinner from "@/components/ui/spinner/Spinner";
+import Button from "@/components/ui/button/Button";
 
 import {useCities} from "@/services/CityQueries/useCities";
+import {useUrlPosition} from "@/hooks/useURLPosition";
 import {useGeolocation} from "@/hooks/useGeolocation";
 
 import styles from './Map.module.css'
-import {useUrlPosition} from "@/hooks/useURLPosition";
-import Button from "@/components/ui/button/Button";
 
 const Map = () => {
   const {cities, isLoading} = useCities();
