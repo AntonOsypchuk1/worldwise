@@ -1,6 +1,6 @@
 import {FC} from 'react';
 
-import {useCity} from "@/query/useCity";
+import {useCity} from "@/services/CityQueries/useCity";
 import {formatDate} from "@/utils/formatDate";
 
 import BackButton from "@/components/ui/button-back/BackButton";

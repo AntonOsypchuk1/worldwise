@@ -2,7 +2,7 @@ import Spinner from "@/components/ui/spinner/Spinner";
 import Message from "@/components/ui/message/Message";
 import CityItem from "@/components/city/city-item/CityItem";
 
-import {useCities} from "@/query/useCities";
+import {useCities} from "@/services/CityQueries/useCities";
 
 import styles from './CityList.module.css'
 
