@@ -1,15 +1,21 @@
 'use client'
 
-import React, {useState} from 'react';
-import styles from './Map.module.css'
+import {useState} from 'react';
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
+
 import ChangeCenter from "@/components/map/subcomponents/ChangeCenter";
 import DetectClick from "@/components/map/subcomponents/DetectClick";
-import {useCities} from "@/contexts/CitiesContext";
+import Spinner from "@/components/ui/spinner/Spinner";
+
+import {useCities} from "@/services/CityQueries/useCities";
+
+import styles from './Map.module.css'
 
 const Map = () => {
-  const {cities} = useCities();
+  const {cities, isLoading} = useCities();
   const [mapPosition, setMapPosition] = useState([51.505, -0.09])
+
+  if (isLoading) return null
 
   return (
     <div className={styles.mapContainer}>

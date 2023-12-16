@@ -34,7 +34,7 @@ export default function RootLayout({
         <Sidebar>
           {children}
         </Sidebar>
-        {/*<Map/>*/}
+        <Map/>
         {/*<User/>*/}
         </main>
       </QueryClientProvider>
