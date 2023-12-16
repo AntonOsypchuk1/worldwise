@@ -1,7 +1,8 @@
-import {useCities} from "@/contexts/CitiesContext";
-
 import Spinner from "@/components/ui/spinner/Spinner";
 import Message from "@/components/ui/message/Message";
+import CityItem from "@/components/city/city-item/CityItem";
+
+import {useCities} from "@/query/useCities";
 
 import styles from './CityList.module.css'
 
@@ -17,7 +18,9 @@ const CityList = () => {
 
   return (
     <ul className={styles.cityList}>
-
+      {cities.map((city) =>
+        <CityItem city={city} key={city.id}/>
+      )}
     </ul>
   );
 };
