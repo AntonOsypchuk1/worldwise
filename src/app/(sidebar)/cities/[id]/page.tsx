@@ -11,9 +11,9 @@ type PropsType = {
 
 const Page = ({params: {id}}: PropsType) => {
   return (
-    <div>
+    <>
       <City cityId={Number(id)}/>
-    </div>
+    </>
   );
 };
 
