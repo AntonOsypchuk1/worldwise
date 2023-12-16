@@ -1,16 +1,18 @@
-import React from 'react';
-import styles from './AppNav.module.css'
+'use client'
+
 import Link from "next/link";
+
+import styles from './AppNav.module.css'
 
 const AppNav = () => {
   return (
     <div className={styles.nav}>
       <ul>
         <li>
-          <Link href="/">Cities</Link>
+          <Link href="/cities">Cities</Link>
         </li>
         <li>
-          <Link href="/">Countries</Link>
+          <Link href="/countries">Countries</Link>
         </li>
       </ul>
     </div>
