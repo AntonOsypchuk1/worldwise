@@ -12,6 +12,7 @@ import {useGeolocation} from "@/hooks/useGeolocation";
 
 import styles from './Map.module.css'
 import {useUrlPosition} from "@/hooks/useURLPosition";
+import Button from "@/components/ui/button/Button";
 
 const Map = () => {
   const {cities, isLoading} = useCities();
@@ -28,10 +29,20 @@ const Map = () => {
     if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
   }, [mapLat, mapLng]);
 
+  useEffect(() => {
+    if (geolocationPosition)
+      setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
+  }, [geolocationPosition]);
+
   if (isLoading) return null
 
   return (
     <div className={styles.mapContainer}>
+      {!geolocationPosition && (
+        <Button type="position" onClick={getPosition}>
+          {isLoadingPosition ? "Loading..." : "Use your position"}
+        </Button>
+      )}
       <MapContainer
         center={mapPosition}
         zoom={8}
