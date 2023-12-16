@@ -1,14 +1,11 @@
-import {useQuery, useQueryClient} from "@tanstack/react-query";
-import {useSearchParams} from "next/navigation";
-import {useEffect} from "react";
-
-const BASE_URL = "http://localhost:8000";
+import {useQuery} from "@tanstack/react-query";
+import {API_URL} from "../../config";
 
 async function getCities() {
   let data;
 
   try {
-    const res = await fetch(`${BASE_URL}/cities`);
+    const res = await fetch(`${API_URL}/cities`);
     data = await res.json();
   } catch (e) {
     throw new Error("There is an error loading data")
