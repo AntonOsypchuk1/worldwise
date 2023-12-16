@@ -1,9 +1,18 @@
-import React from 'react';
+'use client'
 
-const Page = () => {
+import React from 'react';
+import City from "@/components/city/City";
+
+type PropsType = {
+  params: {
+    id: string
+  }
+}
+
+const Page = ({params: {id}}: PropsType) => {
   return (
     <div>
-      city
+      <City cityId={Number(id)}/>
     </div>
   );
 };
