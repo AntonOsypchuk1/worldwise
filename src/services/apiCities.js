@@ -28,3 +28,17 @@ export async function getCity(id) {
 
   return data;
 }
+
+export async function addCity(newCity) {
+  try {
+    await fetch(`${API_URL}/cities`, {
+      method: "POST",
+      body: JSON.stringify(newCity),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (err) {
+    throw new Error("There is an error adding the city.")
+  }
+}
