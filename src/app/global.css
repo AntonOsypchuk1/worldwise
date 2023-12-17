@@ -13,6 +13,10 @@
     --color-light--1: #aaa;
     --color-light--2: #ececec;
     --color-light--3: #d6dee0;
+
+    --color-red-1: #fee2e2;
+    --color-red-2: #b91c1c;
+    --color-red-3: #991b1b;
 }
 
 :global(.leaflet-popup .leaflet-popup-content-wrapper) {
