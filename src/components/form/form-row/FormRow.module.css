@@ -1,0 +1,20 @@
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.error {
+    font-size: 1.4rem;
+    color: var(--color-red-1);
+    background-color: var(--color-red-3);
+    width: fit-content;
+    padding: 2px 10px;
+    border-radius: 1rem;
+}
+
+.message {
+    display: flex;
+    justify-content: space-between;
+}
