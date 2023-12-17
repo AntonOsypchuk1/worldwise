@@ -1,14 +1,21 @@
 import Link from "next/link";
 
-// import {useCities} from "@/contexts/CitiesContext";
-
-import styles from './CityItem.module.css'
+import {useDeleteCity} from "@/services/CityQueries/useDeleteCity";
 import {formatDate} from "@/utils/formatDate";
 
+import styles from './CityItem.module.css'
+import Spinner from "@/components/ui/spinner/Spinner";
+
 const CityItem = ({ city }) => {
-  // const {currentCity} = useCities();
+  const {isDeleting, deleteCity} = useDeleteCity()
 
   const {cityName, emoji, date, id, position} = city;
+
+  function handleDelete(e) {
+    e.preventDefault()
+
+    deleteCity(id);
+  }
 
   return (
     <li>
@@ -21,7 +28,7 @@ const CityItem = ({ city }) => {
         <span className={styles.emoji}>{emoji}</span>
         <h3 className={styles.name}>{cityName}</h3>
         <time className={styles.date}>{formatDate(date)}</time>
-        <button className={styles.deleteBtn} onClick={() => {}}>
+        <button className={styles.deleteBtn} onClick={handleDelete}>
           &times;
         </button>
       </Link>

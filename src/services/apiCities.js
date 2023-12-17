@@ -42,3 +42,13 @@ export async function addCity(newCity) {
     throw new Error("There is an error adding the city.")
   }
 }
+
+export async function deleteCity(id) {
+  try {
+    await fetch(`${API_URL}/cities/${id}`, {
+      method: "DELETE",
+    });
+  } catch {
+    throw new Error("There is an error deleting the city.")
+  }
+}
