@@ -50,8 +50,8 @@ export default function RootLayout({
               fontSize: "16px",
               maxWidth: "500px",
               padding: "16px 24px",
-              backgroundColor: "var(--color-grey-0)",
-              color: "var(--color-grey-700)",
+              backgroundColor: "var(--color-dark--0)",
+              color: "var(--color-light--3)",
             },
           }}
         />
