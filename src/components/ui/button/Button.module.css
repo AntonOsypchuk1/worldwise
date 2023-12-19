@@ -21,6 +21,14 @@
     border: 1px solid currentColor;
 }
 
+.secondary {
+    font-weight: 600;
+    background: none;
+    border: 1px solid currentColor;
+    color: white;
+    text-decoration: none;
+}
+
 .position {
     font-weight: 700;
     position: absolute;
