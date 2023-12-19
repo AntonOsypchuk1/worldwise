@@ -1,10 +1,12 @@
-import React from 'react';
+'use client'
+
+import CountryList from "@/components/country/country-list/CountryList";
 
 const Page = () => {
   return (
-    <div>
-      countries
-    </div>
+    <>
+      <CountryList/>
+    </>
   );
 };
 
