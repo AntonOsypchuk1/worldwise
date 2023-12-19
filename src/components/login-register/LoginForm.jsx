@@ -2,6 +2,8 @@ import {useState} from 'react';
 import styles from './LoginRegisterForm.module.css'
 import Button from "@/components/ui/button/Button";
 import {useLogin} from "@/services/AuthQueries/useLogin";
+import Link from "next/link";
+import {redirect} from "next/navigation";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("creator@gmail.com");
@@ -48,8 +50,16 @@ const LoginForm = () => {
         />
       </div>
 
-      <div>
+      <div className={styles.buttons}>
         <Button type="primary" disabled={isLoading}>Login</Button>
+        <Link href="/register">
+          <Button
+            type="secondary"
+            disabled={isLoading}
+          >
+            Sign Up
+          </Button>
+        </Link>
       </div>
     </form>
   );

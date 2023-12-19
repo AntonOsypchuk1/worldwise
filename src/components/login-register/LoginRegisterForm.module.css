@@ -21,3 +21,14 @@
 .form.loading {
     opacity: 0.3;
 }
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+.buttons a {
+    color: var(--color-brand--2)
+}
