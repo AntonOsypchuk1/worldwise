@@ -37,12 +37,15 @@ export async function login({email, password}) {
 
 export async function signup(newUser) {
   let user;
-  // https://i.pravatar.cc/100
 
   try {
     const res = await fetch(`${API_URL}/users`, {
       method: "POST",
-      body: JSON.stringify({...newUser, session: true}),
+      body: JSON.stringify({
+        ...newUser,
+        avatar: 'https://i.pravatar.cc/100',
+        session: true
+      }),
       headers: {
         "Content-Type": "application/json",
       },
@@ -75,7 +78,7 @@ export async function logout(user) {
   try {
     await fetch(`${API_URL}/users/${user.id}`, {
       method: "PATCH",
-      body: JSON.stringify({session: true}),
+      body: JSON.stringify({session: false}),
       headers: {
         "Content-Type": "application/json",
       },
