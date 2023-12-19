@@ -4,10 +4,15 @@ import styles from './Button.module.css'
 const Button: FC<PropsWithChildren<{
     type: 'primary' | 'position' | 'back'
     onClick?: React.MouseEventHandler<HTMLButtonElement>
+    disabled: boolean
   }>
-> = ({onClick, type, children}) => {
+> = ({onClick, type, disabled, children}) => {
   return (
-    <button onClick={onClick} className={`${styles.btn} ${styles[type]}`}>
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`${styles.btn} ${styles[type]}`}
+    >
       {children}
     </button>
   );
