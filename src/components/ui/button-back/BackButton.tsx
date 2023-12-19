@@ -1,10 +1,8 @@
 import React from 'react';
 import Button from "@/components/ui/button/Button";
-import {useRouter} from "next/navigation";
+import {router} from "next/client";
 
 const BackButton = () => {
-  const router = useRouter();
-
   return (
     <Button
       type='back'
