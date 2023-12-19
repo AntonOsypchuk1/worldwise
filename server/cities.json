@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
       "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -97,28 +85,33 @@
       "id": 98443207
     },
     {
-      "cityName": "Chelmsford",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "cityName": "Coalville",
       "emoji": "🇬🇧",
-      "date": "2023-10-22T11:15:37.006Z",
+      "date": "2023-12-17T16:38:54.171Z",
       "notes": "",
       "position": {
-        "lat": 51.73383267274113,
-        "lng": 0.5548095703125001
+        "lat": 52.80902679913313,
+        "lng": -1.340534418927857
       },
       "id": 98443208
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "creator",
+      "email": "creator@gmail.com",
+      "password": "12345",
+      "avatar": "https://i.pravatar.cc/100?u=zz",
+      "session": true
     },
     {
-      "cityName": "Cambridge",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "emoji": "🇬🇧",
-      "date": "2023-10-22T11:19:15.031Z",
-      "notes": "",
-      "position": {
-        "lat": 52.19413974159753,
-        "lng": 0.14282226562500003
-      },
-      "id": 98443209
+      "name": "test",
+      "email": "test@test.com",
+      "password": "asd",
+      "avatar": "https://i.pravatar.cc/100",
+      "session": false,
+      "id": 3
     }
   ]
 }
