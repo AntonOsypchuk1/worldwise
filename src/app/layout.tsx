@@ -3,6 +3,9 @@
 import './global.css'
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
+import {Suspense} from "react";
+// @ts-ignore
+import SpinnerFullPage from '@/components/ui/spinner-full-page/SpinnerFullPage';
 
 // export const metadata = {
 //   title: 'Next.js',
@@ -27,7 +30,9 @@ export default function RootLayout({
       <body>
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false}/>
-        {children}
+          <Suspense fallback={<SpinnerFullPage />}>
+            {children}
+          </Suspense>
       </QueryClientProvider>
       </body>
     </html>
