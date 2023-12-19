@@ -1,6 +1,8 @@
 'use client'
 
-import RegisterForm from "@/components/login-register/RegisterForm";
+import {lazy} from "react";
+
+const RegisterForm = lazy(() => import( "@/components/login-register/RegisterForm"));
 
 const Page = () => {
   return (
