@@ -1,12 +1,9 @@
 'use client'
 
-import CityList from "@/components/city/city-list/CityList";
-import {useRouter} from "next/navigation";
+import {redirect} from "next/navigation";
 
 const Home = () => {
-  const router = useRouter()
-
-  router.push('/cities');
+  redirect('/cities');
 }
 
 export default Home;
