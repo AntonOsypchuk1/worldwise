@@ -3,12 +3,19 @@ import {useUser} from "@/services/AuthQueries/useUser";
 import {useLogout} from "@/services/AuthQueries/useLogout";
 
 const User = () => {
-  const { user } = useUser()
-  const { logout, isLoading } = useLogout()
+  const { user, isLoading: isLoadingUser } = useUser()
+  const { logout, isLoading: isLoadingLogout } = useLogout()
 
   function handleClick() {
-    logout(user);
+    logout();
   }
+
+  if (isLoadingUser || isLoadingLogout)
+    return (
+      <div className={styles.user}>
+        Loading...
+      </div>
+    );
 
   return (
     <div className={styles.user}>

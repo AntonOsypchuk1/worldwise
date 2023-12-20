@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react';
 import City from "@/components/city/City";
 
 type PropsType = {

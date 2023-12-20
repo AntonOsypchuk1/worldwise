@@ -1,16 +1,15 @@
-import {useRouter} from "next/navigation";
+import {redirect} from "next/navigation";
 import {useMapEvents} from "react-leaflet";
+import {useRouter} from "next/navigation";
 
 const DetectClick = () => {
-  const router = useRouter();
+  const router = useRouter()
 
   useMapEvents({
     click: (
       e: {
         latlng: { lat: any; lng: any; };
-      }) => router.push(
-      `form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`
-    ),
+      }) => router.push(`/form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
   });
 
   return null;

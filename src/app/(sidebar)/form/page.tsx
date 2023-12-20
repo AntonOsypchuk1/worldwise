@@ -1,6 +1,5 @@
 'use client'
 
-
 import Form from "@/components/form/Form";
 
 const Page = () => {

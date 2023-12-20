@@ -1,7 +1,8 @@
 import { useRouter } from 'next/navigation';
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useMemo, useState} from "react";
 import {useForm} from "react-hook-form";
 import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css";
 
 import {useUrlPosition} from "@/hooks/useURLPosition";
 
@@ -18,6 +19,8 @@ import FormRow from "@/components/form/form-row/FormRow";
 import styles from './Form.module.css'
 
 const Form = () => {
+  const router = useRouter()
+
   const [cityName, setCityName] = useState("");
   const [emoji, setEmoji] = useState("");
   const [date, setDate] = useState(new Date());
@@ -25,25 +28,23 @@ const Form = () => {
   
   const [lat, lng] = useUrlPosition()
 
+  useEffect(() => {
+    getCityDataByCoords(lat, lng).then((data) => {
+        setCityName(data.city)
+        setCountry(data.country || data.countryCode)
+        setEmoji(convertToEmoji(data.countryCode))
+      })
+    }, [lat, lng]);
+
   const {register, handleSubmit, formState} = useForm({
-    defaultValues: {
+    values: {
       cityName: cityName,
       date: date
-    }
+    },
   })
   const {errors} = formState;
 
   const {isLoading, addCity} = useAddCity()
-
-  useEffect(() => {
-    getCityDataByCoords(lat, lng).then((data) => {
-      setCityName(data.city || data.locality || "")
-      setEmoji(convertToEmoji(data.countryCode))
-      setCountry(data.countryName)
-    })
-  }, [lat, lng])
-
-  const router = useRouter()
 
   function onSubmit(data) {
     addCity(
@@ -73,7 +74,7 @@ const Form = () => {
       <FormRow label="City name" error={errors?.cityName?.message}>
         <input
           id="cityName"
-          value={cityName}
+          // value={cityName}
           {...register("cityName", {
             required: "required*",
           })}

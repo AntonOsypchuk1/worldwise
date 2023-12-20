@@ -71,10 +71,14 @@ export async function getCurrentUser() {
     throw new Error("There is no session for user.")
   }
 
+  if (!user) return null;
+
   return user;
 }
 
-export async function logout(user) {
+export async function logout() {
+  const user = await getCurrentUser()
+
   try {
     await fetch(`${API_URL}/users/${user.id}`, {
       method: "PATCH",

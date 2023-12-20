@@ -11,7 +11,8 @@ export function useLogout() {
     onSuccess: () => {
       queryClient.removeQueries();
       router.push("/login")
-    }
+    },
+    retry: false
   })
 
   return { logout, isLoading };

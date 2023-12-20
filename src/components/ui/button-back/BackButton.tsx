@@ -6,7 +6,10 @@ const BackButton = () => {
   return (
     <Button
       type='back'
-      onClick={() => router.back()}
+      onClick={(e) => {
+        e.preventDefault()
+        window.history.go(-1)
+      }}
     >
       &larr; Back
     </Button>
