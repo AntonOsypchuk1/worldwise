@@ -3,7 +3,6 @@ import styles from './LoginRegisterForm.module.css'
 import Button from "@/components/ui/button/Button";
 import {useLogin} from "@/services/AuthQueries/useLogin";
 import Link from "next/link";
-import {redirect} from "next/navigation";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("creator@gmail.com");

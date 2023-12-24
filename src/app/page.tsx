@@ -1,9 +1,16 @@
 'use client'
 
-import {permanentRedirect, redirect} from "next/navigation";
+import {redirect} from "next/navigation";
+import {useUser} from "@/services/AuthQueries/useUser";
 
 const Home = () => {
-  permanentRedirect('/cities');
+  const {user, isLoading} = useUser();
+
+  if (user) {
+    return redirect('/cities')
+  } else {
+    return redirect('/login')
+  }
 }
 
 export default Home;
