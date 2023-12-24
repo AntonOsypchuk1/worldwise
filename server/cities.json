@@ -85,15 +85,40 @@
       "id": 98443207
     },
     {
-      "cityName": "Coalville",
+      "cityName": "Bracon Ash",
+      "country": "GB",
       "emoji": "🇬🇧",
-      "date": "2023-12-17T16:38:54.171Z",
+      "date": "2023-12-24T13:32:23.646Z",
       "notes": "",
       "position": {
-        "lat": 52.80902679913313,
-        "lng": -1.340534418927857
+        "lat": 52.55555706077483,
+        "lng": 1.2286916678097581
       },
-      "id": 98443208
+      "id": 98443209
+    },
+    {
+      "cityName": "Halynka",
+      "country": "BY",
+      "emoji": "🇧🇾",
+      "date": "2023-12-24T14:21:46.300Z",
+      "notes": "",
+      "position": {
+        "lat": 52.8410012058767,
+        "lng": 26.431702582609187
+      },
+      "id": 98443210
+    },
+    {
+      "cityName": "Sztabin",
+      "country": "PL",
+      "emoji": "🇵🇱",
+      "date": "2023-12-24T14:21:49.518Z",
+      "notes": "cdsac",
+      "position": {
+        "lat": 53.74630217726768,
+        "lng": 23.202133662739843
+      },
+      "id": 98443211
     }
   ],
   "users": [
@@ -103,7 +128,7 @@
       "email": "creator@gmail.com",
       "password": "12345",
       "avatar": "https://i.pravatar.cc/100?u=zz",
-      "session": true
+      "session": false
     },
     {
       "name": "test",
@@ -112,6 +137,14 @@
       "avatar": "https://i.pravatar.cc/100",
       "session": false,
       "id": 3
+    },
+    {
+      "name": "Anton",
+      "email": "test@test.comasdc",
+      "password": "asdc",
+      "avatar": "https://i.pravatar.cc/100",
+      "session": true,
+      "id": 4
     }
   ]
 }
