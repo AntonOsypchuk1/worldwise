@@ -200,7 +200,7 @@
       "email": "creator@gmail.com",
       "password": "12345",
       "avatar": "https://i.pravatar.cc/100?u=zz",
-      "session": false
+      "session": true
     },
     {
       "name": "test",
