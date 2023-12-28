@@ -44,14 +44,20 @@ export async function login({
   return user;
 }
 
-export async function signup(newUser: IUser): Promise<IUserWithSession> {
+export async function signup({
+  name,
+  email,
+  password,
+}: IUser): Promise<IUserWithSession> {
   let user;
 
   try {
     const res = await fetch(`${API_URL}/users`, {
       method: "POST",
       body: JSON.stringify({
-        ...newUser,
+        name,
+        email,
+        password,
         avatar: "https://i.pravatar.cc/100",
         session: true,
       }),

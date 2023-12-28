@@ -1,7 +1,7 @@
-import {useState} from 'react';
-import styles from './LoginRegisterForm.module.css'
+import { FormEvent, useState } from "react";
+import styles from "./LoginRegisterForm.module.css";
 import Button from "@/components/ui/button/Button";
-import {useLogin} from "@/services/AuthQueries/useLogin";
+import { useLogin } from "@/services/AuthQueries/useLogin";
 import Link from "next/link";
 
 const LoginForm = () => {
@@ -9,7 +9,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState("12345");
   const { login, isLoading } = useLogin();
 
-  function handleSubmit(e) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!email || !password) return;
     login(
@@ -25,7 +25,8 @@ const LoginForm = () => {
 
   return (
     <form
-      className={`${styles.form} ${isLoading ? "loading" : ""}`} onSubmit={handleSubmit}
+      className={`${styles.form} ${isLoading ? "loading" : ""}`}
+      onSubmit={handleSubmit}
     >
       <div className={styles.row}>
         <label htmlFor="email">Email address</label>
@@ -50,12 +51,11 @@ const LoginForm = () => {
       </div>
 
       <div className={styles.buttons}>
-        <Button type="primary" disabled={isLoading}>Login</Button>
+        <Button type="primary" disabled={isLoading}>
+          Login
+        </Button>
         <Link href="/register">
-          <Button
-            type="secondary"
-            disabled={isLoading}
-          >
+          <Button type="secondary" disabled={isLoading}>
             Sign Up
           </Button>
         </Link>

@@ -1,28 +1,28 @@
-import {useState} from "react";
-import {useSignup} from "@/services/AuthQueries/useSignup";
-import styles from './LoginRegisterForm.module.css'
+import { useSignup } from "@/services/AuthQueries/useSignup";
+import styles from "./LoginRegisterForm.module.css";
 import Button from "@/components/ui/button/Button";
 import Link from "next/link";
-import {useForm} from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import FormRow from "@/components/form/form-row/FormRow";
 
 const RegisterForm = () => {
   const { signup, isLoading } = useSignup();
-  const {register, formState, getValues, handleSubmit, reset} = useForm();
-  const {errors} = formState;
+  const { register, formState, getValues, handleSubmit, reset } = useForm();
+  const { errors } = formState;
 
-  function onSubmit({name, email, password}) {
+  const onSubmit: SubmitHandler<FieldValues> = ({ name, email, password }) => {
     signup(
-      {name, email, password},
+      { name, email, password, avatar: "" },
       {
         onSettled: () => reset(),
       },
     );
-  }
+  };
 
   return (
     <form
-      className={`${styles.form} ${isLoading ? "loading" : ""}`} onSubmit={handleSubmit(onSubmit)}
+      className={`${styles.form} ${isLoading ? "loading" : ""}`}
+      onSubmit={handleSubmit(onSubmit)}
     >
       <FormRow label="Full name" error={errors?.name?.message}>
         <input
@@ -30,7 +30,7 @@ const RegisterForm = () => {
           id="name"
           disabled={isLoading}
           {...register("name", {
-            required: "required*"
+            required: "required*",
           })}
         />
       </FormRow>
@@ -44,8 +44,8 @@ const RegisterForm = () => {
             required: "required*",
             pattern: {
               value: /\S+@\S+\.\S+/,
-              message: "not valid email"
-            }
+              message: "not valid email",
+            },
           })}
         />
       </FormRow>
@@ -59,7 +59,7 @@ const RegisterForm = () => {
             required: "required*",
             minLength: {
               value: 3,
-              message: "min 3 char"
+              message: "min 3 char",
             },
           })}
         />
@@ -72,23 +72,19 @@ const RegisterForm = () => {
           disabled={isLoading}
           {...register("passwordConfirm", {
             required: "required*",
-            validate: (value) => value === getValues().password || "passwords need to match"
+            validate: (value) =>
+              value === getValues().password || "passwords need to match",
           })}
         />
       </FormRow>
 
       <div className={styles.buttons}>
-        <Button
-          type="primary"
-          disabled={isLoading}
-        >
+        <Button type="primary" disabled={isLoading}>
           Sign Up
         </Button>
         <div>
           <span>Already have an account? </span>
-          <Link href="/login">
-            Login
-          </Link>
+          <Link href="/login">Login</Link>
         </div>
       </div>
     </form>

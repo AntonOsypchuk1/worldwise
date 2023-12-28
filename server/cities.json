@@ -119,6 +119,54 @@
         "lng": 23.202133662739843
       },
       "id": 98443211
+    },
+    {
+      "cityName": "Bramsche",
+      "country": "DE",
+      "emoji": "🇩🇪",
+      "date": "2023-12-28T10:17:36.162Z",
+      "notes": "cdsasadc",
+      "position": {
+        "lat": 52.41483157448679,
+        "lng": 7.993795822834119
+      },
+      "id": 98443212
+    },
+    {
+      "cityName": "Overath",
+      "country": "DE",
+      "emoji": "🇩🇪",
+      "date": "2023-12-28T10:18:19.863Z",
+      "notes": "cdsadc",
+      "position": {
+        "lat": 50.94916699377242,
+        "lng": 7.2390923702479135
+      },
+      "id": 98443213
+    },
+    {
+      "cityName": "Raunds",
+      "country": "GB",
+      "emoji": "🇬🇧",
+      "date": "2023-12-28T13:17:32.679Z",
+      "notes": "cdas",
+      "position": {
+        "lat": 52.358535391694964,
+        "lng": -0.48933118024237615
+      },
+      "id": 98443214
+    },
+    {
+      "cityName": "Brampton",
+      "country": "GB",
+      "emoji": "🇬🇧",
+      "date": "2023-12-28T13:21:06.300Z",
+      "notes": "",
+      "position": {
+        "lat": 53.24806551692375,
+        "lng": -1.5493317916696148
+      },
+      "id": 98443215
     }
   ],
   "users": [
@@ -143,8 +191,24 @@
       "email": "test@test.comasdc",
       "password": "asdc",
       "avatar": "https://i.pravatar.cc/100",
-      "session": true,
+      "session": false,
       "id": 4
+    },
+    {
+      "name": "asdcasdc",
+      "email": "test@test.comasdc",
+      "password": "123",
+      "avatar": "https://i.pravatar.cc/100",
+      "session": false,
+      "id": 5
+    },
+    {
+      "name": "Anton",
+      "email": "test@test.comasdc",
+      "password": "123",
+      "avatar": "https://i.pravatar.cc/100",
+      "session": true,
+      "id": 6
     }
   ]
 }

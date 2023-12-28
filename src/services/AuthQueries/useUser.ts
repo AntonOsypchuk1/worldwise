@@ -1,11 +1,17 @@
-import {useQuery} from "@tanstack/react-query";
-import {getCurrentUser} from "@/services/apiAuth";
+import { useQuery } from "@tanstack/react-query";
+import { getCurrentUser } from "@/services/apiAuth";
+import { IUserWithSession } from "@/types/user.interface";
 
-export function useUser() {
-  const {isLoading, data: user} = useQuery({
+interface UseUserHook {
+  isLoading: boolean;
+  user: IUserWithSession | null | undefined;
+}
+
+export function useUser(): UseUserHook {
+  const { isLoading, data: user } = useQuery<IUserWithSession | null>({
     queryKey: ["user"],
     queryFn: getCurrentUser,
   });
 
-  return { isLoading, user }
+  return { isLoading, user };
 }

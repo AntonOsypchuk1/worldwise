@@ -1,23 +1,23 @@
-import {FC} from 'react';
+import { FC } from "react";
 
-import {useCity} from "@/services/CityQueries/useCity";
-import {formatDate} from "@/utils/formatDate";
+import { useCity } from "@/services/CityQueries/useCity";
+import { formatDate } from "@/utils/formatDate";
 
 import BackButton from "@/components/ui/button-back/BackButton";
 import Spinner from "@/components/ui/spinner/Spinner";
 
-import styles from './City.module.css'
+import styles from "./City.module.css";
 
 type PropsType = {
-  cityId: number
-}
+  cityId: number;
+};
 
 const City: FC<PropsType> = ({ cityId }) => {
-  const {city, isLoading, error} = useCity(cityId);
+  const { city, isLoading, error } = useCity(cityId);
 
-  if (isLoading) return <Spinner/>
+  if (isLoading) return <Spinner />;
 
-  const {emoji, cityName, date, notes} = city;
+  const { emoji, cityName, date, notes } = city || {};
 
   return (
     <div className={styles.city}>
@@ -30,7 +30,7 @@ const City: FC<PropsType> = ({ cityId }) => {
 
       <div className={styles.row}>
         <h6>You went to {cityName} on</h6>
-        <p>{formatDate(date || null)}</p>
+        <p>{formatDate(date || "")}</p>
       </div>
 
       {notes && (

@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 import Button from "@/components/ui/button/Button";
-import {router} from "next/client";
 
 const BackButton = () => {
   return (
     <Button
-      type='back'
+      type="back"
       onClick={(e) => {
-        e.preventDefault()
-        window.history.go(-1)
+        e.preventDefault();
+        window.history.go(-1);
       }}
     >
       &larr; Back

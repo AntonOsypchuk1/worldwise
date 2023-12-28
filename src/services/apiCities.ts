@@ -1,5 +1,5 @@
 import { API_URL } from "../../config";
-import { ICity } from "@/types/city.interface";
+import { ICity, INewCity } from "@/types/city.interface";
 
 export async function getCities(): Promise<Array<ICity>> {
   let data;
@@ -28,7 +28,7 @@ export async function getCity(id: number): Promise<ICity> {
   return data;
 }
 
-export async function addCity(newCity: ICity) {
+export async function addCity(newCity: INewCity) {
   try {
     await fetch(`${API_URL}/cities`, {
       method: "POST",

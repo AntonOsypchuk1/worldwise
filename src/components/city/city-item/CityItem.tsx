@@ -1,18 +1,23 @@
 import Link from "next/link";
 
-import {useDeleteCity} from "@/services/CityQueries/useDeleteCity";
-import {formatDate} from "@/utils/formatDate";
+import { useDeleteCity } from "@/services/CityQueries/useDeleteCity";
+import { formatDate } from "@/utils/formatDate";
 
-import styles from './CityItem.module.css'
-import Spinner from "@/components/ui/spinner/Spinner";
+import styles from "./CityItem.module.css";
+import { ICity } from "@/types/city.interface";
+import { FC, MouseEvent } from "react";
 
-const CityItem = ({ city }) => {
-  const {isDeleting, deleteCity} = useDeleteCity()
+interface CityProps {
+  city: ICity;
+}
 
-  const {cityName, emoji, date, id, position} = city;
+const CityItem: FC<CityProps> = ({ city }) => {
+  const { isDeleting, deleteCity } = useDeleteCity();
 
-  function handleDelete(e) {
-    e.preventDefault()
+  const { cityName, emoji, date, id, position } = city;
+
+  function handleDelete(e: MouseEvent<HTMLButtonElement>) {
+    e.preventDefault();
 
     deleteCity(id);
   }
