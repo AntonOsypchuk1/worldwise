@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   Controller,
@@ -24,6 +24,8 @@ import FormRow from "@/components/form/form-row/FormRow";
 import styles from "./Form.module.css";
 
 const Form = () => {
+  const router = useRouter();
+
   const [cityName, setCityName] = useState("");
   const [emoji, setEmoji] = useState("");
   const [date, setDate] = useState(new Date());
@@ -65,7 +67,7 @@ const Form = () => {
         position: { lat, lng },
       },
       {
-        onSuccess: () => redirect("/cities"),
+        onSuccess: () => router.push("/cities"),
       },
     );
   };
