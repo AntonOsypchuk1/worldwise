@@ -231,7 +231,7 @@
       "email": "test@test.comasdc",
       "password": "123",
       "avatar": "https://i.pravatar.cc/100",
-      "session": true,
+      "session": false,
       "id": 6
     }
   ]

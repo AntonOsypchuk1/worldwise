@@ -1,21 +1,26 @@
-'use client'
+"use client";
 
 import Sidebar from "@/components/sidebar/Sidebar";
 import Map from "@/components/map/Map";
-import {Toaster} from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import RequireAuth from "@/components/utils/RequireAuth";
 import User from "@/components/user/User";
+import EmptyMap from "@/components/map/EmptyMap";
 
-export default function RootLayout({children}: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
-      <main className='app'>
+      <main className="app">
         <RequireAuth>
-          <Sidebar>
-            {children}
-          </Sidebar>
-          <Map/>
-          <User/>
+          <Sidebar isAuth={true}>{children}</Sidebar>
+          <EmptyMap>
+            <Map />
+          </EmptyMap>
+          <User />
         </RequireAuth>
       </main>
 
@@ -36,5 +41,5 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         }}
       />
     </>
-  )
+  );
 }

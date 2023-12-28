@@ -1,18 +1,22 @@
-import {FC, PropsWithChildren} from 'react';
+import { FC, PropsWithChildren } from "react";
 
-import styles from "./Sidebar.module.css"
+import styles from "./Sidebar.module.css";
 
-import AppNav from '../app-nav/AppNav';
-import Logo from '../logo/Logo';
+import AppNav from "../app-nav/AppNav";
+import Logo from "../logo/Logo";
 
-const Sidebar:FC<PropsWithChildren<{
-    children: React.ReactNode
+const Sidebar: FC<
+  PropsWithChildren<{
+    children: React.ReactNode;
+    isAuth: boolean;
   }>
-> = ({children}) => {
+> = ({ children, isAuth }) => {
+  // const { user, isLoading } = useUser();
+
   return (
     <div className={styles.sidebar}>
-      <Logo/>
-      <AppNav/>
+      <Logo />
+      {isAuth && <AppNav />}
       {children}
       <footer className={styles.footer}>
         <p className={styles.copyright}>
