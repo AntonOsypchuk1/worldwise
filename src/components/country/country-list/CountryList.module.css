@@ -4,7 +4,11 @@
     list-style: none;
     overflow: auto;
 
-    display: grid;
-    align-content: start;
-    gap: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.countryList::-webkit-scrollbar {
+    width: 0;
 }

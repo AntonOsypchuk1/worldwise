@@ -1,0 +1,35 @@
+.closeBtn {
+    height: 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-dark--1);
+    color: var(--color-light--2);
+    font-size: 1.6rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.closeBtn:hover {
+    background-color: var(--color-brand--2);
+    color: var(--color-dark--1);
+}
+
+.expandBtn:hover {
+    background-color: var(--color-dark--1);
+    color: var(--color-light--2);
+}
+
+.expandBtn {
+    height: 3.5rem;
+    aspect-ratio: 1;
+    border-radius: 20%;
+    border: none;
+    background-color: transparent;
+    color: var(--color-light--1);
+    font-size: 2rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s;
+}

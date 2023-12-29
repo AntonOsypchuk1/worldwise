@@ -6,6 +6,7 @@ import { formatDate } from "@/utils/formatDate";
 import styles from "./CityItem.module.css";
 import { ICity } from "@/types/city.interface";
 import { FC, MouseEvent } from "react";
+import SmallButton from "@/components/ui/button-small/SmallButton";
 
 interface CityProps {
   city: ICity;
@@ -33,9 +34,7 @@ const CityItem: FC<CityProps> = ({ city }) => {
         <span className={styles.emoji}>{emoji}</span>
         <h3 className={styles.name}>{cityName}</h3>
         <time className={styles.date}>{formatDate(date)}</time>
-        <button className={styles.deleteBtn} onClick={handleDelete}>
-          &times;
-        </button>
+        <SmallButton onClick={handleDelete} icon="&times;" type="close" />
       </Link>
     </li>
   );
