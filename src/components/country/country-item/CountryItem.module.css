@@ -1,11 +1,12 @@
 .countryItem {
     display: flex;
-    flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 0.2rem;
 
     font-size: 1.7rem;
     font-weight: 600;
+    max-height: 5vh;
 
     background-color: var(--color-dark--2);
     border-radius: 7px;
@@ -16,4 +17,12 @@
 .countryItem span:first-child {
     font-size: 3rem;
     line-height: 1;
+    margin-right: 5px;
+}
+
+.countryItem span:last-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20vw;
 }
