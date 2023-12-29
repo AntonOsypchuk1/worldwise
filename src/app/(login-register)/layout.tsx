@@ -11,11 +11,7 @@ export default function RootLayout({
   return (
     <main className="app">
       <RequireNotAuth>
-        <Sidebar isAuth={false}>
-          {/*<div className={styles.layout}>*/}
-          {children}
-          {/*</div>*/}
-        </Sidebar>
+        <Sidebar isAuth={false}>{children}</Sidebar>
         <EmptyMap />
       </RequireNotAuth>
     </main>

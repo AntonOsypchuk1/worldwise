@@ -11,8 +11,6 @@ const Sidebar: FC<
     isAuth: boolean;
   }>
 > = ({ children, isAuth }) => {
-  // const { user, isLoading } = useUser();
-
   return (
     <div className={styles.sidebar}>
       <Logo />
