@@ -8,11 +8,7 @@ import { ICity } from "@/types/city.interface";
 import { FC, MouseEvent } from "react";
 import SmallButton from "@/components/ui/button-small/SmallButton";
 
-interface CityProps {
-  city: ICity;
-}
-
-const CityItem: FC<CityProps> = ({ city }) => {
+const CityItem: FC<{ city: ICity }> = ({ city }) => {
   const { isDeleting, deleteCity } = useDeleteCity();
 
   const { cityName, emoji, date, id, position } = city;

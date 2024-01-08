@@ -29,14 +29,16 @@ const Form = () => {
   const [cityName, setCityName] = useState("");
   const [emoji, setEmoji] = useState("");
   const [date, setDate] = useState(new Date());
-  const [country, setCountry] = useState("");
+  const [countryName, setCountryName] = useState("");
+  const [countryCode, setCountryCode] = useState("");
 
   const { lat, lng } = useUrlPosition();
 
   useEffect(() => {
     getCityDataByCoords(lat, lng).then((data) => {
       setCityName(data?.city);
-      setCountry(data?.country || data?.countryCode);
+      setCountryName(data?.countryName || data?.countryCode);
+      setCountryCode(data?.countryCode);
       setEmoji(convertToEmoji(data?.countryCode));
     });
   }, [lat, lng]);
@@ -60,7 +62,8 @@ const Form = () => {
     addCity(
       {
         cityName: data.cityName,
-        country,
+        countryName,
+        countryCode,
         emoji,
         date: data.date.toISOString(),
         notes: data.notes || "",
