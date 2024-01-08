@@ -1,10 +1,15 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 
-import styles from './AppNav.module.css'
+import styles from "./AppNav.module.css";
+import { useUser } from "@/services/AuthQueries/useUser";
 
 const AppNav = () => {
+  const { user } = useUser();
+
+  if (!user) return;
+
   return (
     <div className={styles.nav}>
       <ul>

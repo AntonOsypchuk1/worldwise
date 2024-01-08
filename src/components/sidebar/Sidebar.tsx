@@ -8,13 +8,12 @@ import Logo from "../logo/Logo";
 const Sidebar: FC<
   PropsWithChildren<{
     children: React.ReactNode;
-    isAuth: boolean;
   }>
-> = ({ children, isAuth }) => {
+> = ({ children }) => {
   return (
     <div className={styles.sidebar}>
       <Logo />
-      {isAuth && <AppNav />}
+      <AppNav />
       {children}
       <footer className={styles.footer}>
         <p className={styles.copyright}>
