@@ -3,6 +3,7 @@
 import { useCities } from "@/services/CityQueries/useCities";
 import { Marker, Popup } from "react-leaflet";
 import DetectClick from "@/components/map/subcomponents/DetectClick";
+import CountryBounds from "@/components/map/subcomponents/CountryBounds";
 
 const Map = () => {
   const { cities, isLoading } = useCities();
@@ -19,6 +20,7 @@ const Map = () => {
         </Marker>
       ))}
       <DetectClick />
+      <CountryBounds />
     </>
   );
 };
