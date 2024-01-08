@@ -1,0 +1,11 @@
+.countryInfo {
+    background-color: var(--color-dark--0);
+    padding: 10px;
+    position: relative;
+    border-top: 5px solid var(--color-dark--0);
+
+    top: -5px;
+    z-index: 1;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
