@@ -1,6 +1,7 @@
 export interface INewCity {
   cityName: string;
-  country: string;
+  countryName: string;
+  countryCode: string;
   emoji: string;
   date: string;
   notes: string;
