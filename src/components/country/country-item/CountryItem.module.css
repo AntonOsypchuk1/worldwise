@@ -2,8 +2,11 @@
 .countryItem:link,
 .countryItem:visited {
     display: flex;
+    position: relative;
+    z-index: 2;
     gap: 1.6rem;
     align-items: center;
+    height: 4.7rem;
 
     background-color: var(--color-dark--2);
     border-radius: 7px;
