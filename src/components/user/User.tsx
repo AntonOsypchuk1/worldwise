@@ -6,8 +6,9 @@ const User = () => {
   const { user, isLoading: isLoadingUser } = useUser();
   const { logout, isLoading: isLoadingLogout } = useLogout();
 
-  if (isLoadingUser || isLoadingLogout)
-    return <div className={styles.user}>Loading...</div>;
+  if (isLoadingLogout) return <div className={styles.user}>Loading...</div>;
+
+  if (!user || isLoadingUser) return null;
 
   return (
     <div className={styles.user}>
