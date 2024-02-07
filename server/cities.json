@@ -1,196 +1,82 @@
 {
   "cities": [
     {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "cityName": "Olevsk",
+      "countryName": "Ukraine",
+      "countryCode": "UA",
+      "emoji": "🇺🇦",
+      "date": "2024-02-06T14:17:12.033Z",
+      "notes": "adsc",
+      "position": {
+        "lat": 50.99315558328563,
+        "lng": 27.46855541570928
+      },
+      "id": 98443218
+    },
+    {
+      "cityName": "Market Harborough",
+      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "countryCode": "GB",
+      "emoji": "🇬🇧",
+      "date": "2024-02-06T17:40:46.064Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": 52.64596881492179,
+        "lng": -0.83525996245156
       },
-      "id": 17806751
+      "id": 98443219
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
-      "cityName": "Billington",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "emoji": "🇬🇧",
-      "date": "2023-10-22T10:14:08.932Z",
-      "notes": "test",
-      "position": {
-        "lat": 51.89016978575696,
-        "lng": -0.6378752119802455
-      },
-      "id": 98443200
-    },
-    {
-      "cityName": "Pervomayskoye",
-      "country": "Ukraine",
-      "emoji": "🇺🇦",
-      "date": "2023-10-22T10:22:12.307Z",
-      "notes": "test",
-      "position": {
-        "lat": 45.07352060670971,
-        "lng": 35.14526367187501
-      },
-      "id": 98443204
-    },
-    {
-      "cityName": "Murzuq",
-      "country": "Libya",
+      "cityName": "Murzuk",
+      "countryName": "Libya",
+      "countryCode": "LY",
       "emoji": "🇱🇾",
-      "date": "2023-10-22T11:07:37.415Z",
+      "date": "2024-02-06T17:40:52.118Z",
       "notes": "",
       "position": {
-        "lat": 24.5271348225978,
-        "lng": 17.226562500000004
+        "lat": 25.349560261569216,
+        "lng": 17.225190770348814
       },
-      "id": 98443205
+      "id": 98443220
     },
     {
-      "cityName": "Zhytomyr",
-      "country": "Ukraine",
-      "emoji": "🇺🇦",
-      "date": "2023-10-22T11:09:18.331Z",
-      "notes": "test",
-      "position": {
-        "lat": 50.240178884797025,
-        "lng": 28.690795898437504
-      },
-      "id": 98443206
-    },
-    {
-      "cityName": "Greater London",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "emoji": "🇬🇧",
-      "date": "2023-10-22T11:15:24.028Z",
-      "notes": "test",
-      "position": {
-        "lat": 51.474540439419755,
-        "lng": -0.08239746093750001
-      },
-      "id": 98443207
-    },
-    {
-      "cityName": "Bracon Ash",
-      "country": "GB",
-      "emoji": "🇬🇧",
-      "date": "2023-12-24T13:32:23.646Z",
+      "cityName": "Krasnaya Polyana",
+      "countryName": "Russian Federation (the)",
+      "countryCode": "RU",
+      "emoji": "🇷🇺",
+      "date": "2024-02-06T17:40:55.297Z",
       "notes": "",
       "position": {
-        "lat": 52.55555706077483,
-        "lng": 1.2286916678097581
+        "lat": 46.10687746437058,
+        "lng": 41.61603000847868
       },
-      "id": 98443209
+      "id": 98443221
     },
     {
-      "cityName": "Halynka",
-      "country": "BY",
-      "emoji": "🇧🇾",
-      "date": "2023-12-24T14:21:46.300Z",
+      "cityName": "Bayganin",
+      "countryName": "Kazakhstan",
+      "countryCode": "KZ",
+      "emoji": "🇰🇿",
+      "date": "2024-02-06T17:40:58.557Z",
       "notes": "",
       "position": {
-        "lat": 52.8410012058767,
-        "lng": 26.431702582609187
+        "lat": 47.76580062280127,
+        "lng": 56.42627483042638
       },
-      "id": 98443210
+      "id": 98443222
     },
     {
-      "cityName": "Sztabin",
-      "country": "PL",
-      "emoji": "🇵🇱",
-      "date": "2023-12-24T14:21:49.518Z",
-      "notes": "cdsac",
-      "position": {
-        "lat": 53.74630217726768,
-        "lng": 23.202133662739843
-      },
-      "id": 98443211
-    },
-    {
-      "cityName": "Bramsche",
-      "country": "DE",
-      "emoji": "🇩🇪",
-      "date": "2023-12-28T10:17:36.162Z",
-      "notes": "cdsasadc",
-      "position": {
-        "lat": 52.41483157448679,
-        "lng": 7.993795822834119
-      },
-      "id": 98443212
-    },
-    {
-      "cityName": "Overath",
-      "country": "DE",
-      "emoji": "🇩🇪",
-      "date": "2023-12-28T10:18:19.863Z",
-      "notes": "cdsadc",
-      "position": {
-        "lat": 50.94916699377242,
-        "lng": 7.2390923702479135
-      },
-      "id": 98443213
-    },
-    {
-      "cityName": "Raunds",
-      "country": "GB",
-      "emoji": "🇬🇧",
-      "date": "2023-12-28T13:17:32.679Z",
-      "notes": "cdas",
-      "position": {
-        "lat": 52.358535391694964,
-        "lng": -0.48933118024237615
-      },
-      "id": 98443214
-    },
-    {
-      "cityName": "Brampton",
-      "country": "GB",
-      "emoji": "🇬🇧",
-      "date": "2023-12-28T13:21:06.300Z",
+      "cityName": "Motala",
+      "countryName": "Sweden",
+      "countryCode": "SE",
+      "emoji": "🇸🇪",
+      "date": "2024-02-06T21:30:35.350Z",
       "notes": "",
       "position": {
-        "lat": 53.24806551692375,
-        "lng": -1.5493317916696148
+        "lat": 58.4262719006988,
+        "lng": 15.072966314732733
       },
-      "id": 98443215
-    },
-    {
-      "cityName": "Babraham",
-      "country": "GB",
-      "emoji": "🇬🇧",
-      "date": "2023-12-28T13:36:20.572Z",
-      "notes": "cdsa",
-      "position": {
-        "lat": 52.13644594331504,
-        "lng": 0.22996698863055
-      },
-      "id": 98443216
-    },
-    {
-      "cityName": "North Valley",
-      "country": "US",
-      "emoji": "🇺🇸",
-      "date": "2023-12-28T13:37:26.294Z",
-      "notes": "",
-      "position": {
-        "lat": 40.28345378059906,
-        "lng": -100.2088552282719
-      },
-      "id": 98443217
+      "id": 98443224
     }
   ],
   "users": [
