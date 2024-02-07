@@ -1,6 +1,8 @@
+'use client'
+
 import styles from "./User.module.css";
-import { useUser } from "@/services/AuthQueries/useUser";
-import { useLogout } from "@/services/AuthQueries/useLogout";
+import {useUser} from "@/services/AuthQueries/useUser";
+import {useLogout} from "@/services/AuthQueries/useLogout";
 
 const User = () => {
   const { user, isLoading: isLoadingUser } = useUser();

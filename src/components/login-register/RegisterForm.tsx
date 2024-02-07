@@ -1,8 +1,8 @@
-import { useSignup } from "@/services/AuthQueries/useSignup";
+import {useSignup} from "@/services/AuthQueries/useSignup";
 import styles from "./LoginRegisterForm.module.css";
 import Button from "@/components/ui/button/Button";
 import Link from "next/link";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import {FieldValues, SubmitHandler, useForm} from "react-hook-form";
 import FormRow from "@/components/form/form-row/FormRow";
 
 const RegisterForm = () => {
@@ -24,7 +24,7 @@ const RegisterForm = () => {
       className={`${styles.form} ${isLoading ? "loading" : ""}`}
       onSubmit={handleSubmit(onSubmit)}
     >
-      <FormRow label="Full name" error={errors?.name?.message}>
+      <FormRow label="Full name" error={errors?.name?.message?.toString()}>
         <input
           type="text"
           id="name"
@@ -35,7 +35,7 @@ const RegisterForm = () => {
         />
       </FormRow>
 
-      <FormRow label="Email address" error={errors?.email?.message}>
+      <FormRow label="Email address" error={errors?.email?.message?.toString()}>
         <input
           type="email"
           id="email"
@@ -50,7 +50,7 @@ const RegisterForm = () => {
         />
       </FormRow>
 
-      <FormRow label="Password" error={errors?.password?.message}>
+      <FormRow label="Password" error={errors?.password?.message?.toString()}>
         <input
           type="password"
           id="password"
@@ -65,7 +65,7 @@ const RegisterForm = () => {
         />
       </FormRow>
 
-      <FormRow label="Repeat password" error={errors?.passwordConfirm?.message}>
+      <FormRow label="Repeat password" error={errors?.passwordConfirm?.message?.toString()}>
         <input
           type="password"
           id="passwordConfirm"
