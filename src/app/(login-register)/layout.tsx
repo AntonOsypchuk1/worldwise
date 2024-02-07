@@ -3,6 +3,11 @@ import Sidebar from "@/components/sidebar/Sidebar";
 import React from "react";
 import EmptyMap from "@/components/map/EmptyMap";
 
+export const metadata = {
+  title: 'Worldwise - Authorize',
+  description: 'Authorize to your personal account',
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -11,7 +16,7 @@ export default function RootLayout({
   return (
     <main className="app">
       <RequireNotAuth>
-        <Sidebar isAuth={false}>{children}</Sidebar>
+        <Sidebar>{children}</Sidebar>
         <EmptyMap />
       </RequireNotAuth>
     </main>
