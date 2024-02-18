@@ -1,5 +1,7 @@
-import { API_URL } from "../../config";
 import { IUser, IUserWithSession } from "@/types/user.interface";
+import getApiUrl from "@/utils/getApiUrl";
+
+const apiUrl = getApiUrl();
 
 export async function login({
   email,
@@ -12,7 +14,7 @@ export async function login({
 
   // 1. Getting user
   try {
-    const res = await fetch(`${API_URL}/users`);
+    const res = await fetch(`${apiUrl}/users`);
     const users = await res.json();
 
     user = users.filter(
@@ -30,7 +32,7 @@ export async function login({
 
   // 2. Setting user session
   try {
-    await fetch(`${API_URL}/users/${user.id}`, {
+    await fetch(`${apiUrl}/users/${user.id}`, {
       method: "PATCH",
       body: JSON.stringify({ session: true }),
       headers: {
@@ -52,7 +54,7 @@ export async function signup({
   let user;
 
   try {
-    const res = await fetch(`${API_URL}/users`, {
+    const res = await fetch(`${apiUrl}/users`, {
       method: "POST",
       body: JSON.stringify({
         name,
@@ -77,7 +79,7 @@ export async function getCurrentUser(): Promise<IUserWithSession | null> {
   let user;
 
   try {
-    const res = await fetch(`${API_URL}/users`);
+    const res = await fetch(`${apiUrl}/users`);
     const users = await res.json();
     user = users.find((user: IUserWithSession) => user.session);
   } catch (e) {
@@ -93,7 +95,7 @@ export async function logout() {
   const user = await getCurrentUser();
 
   try {
-    await fetch(`${API_URL}/users/${user?.id}`, {
+    await fetch(`${apiUrl}/users/${user?.id}`, {
       method: "PATCH",
       body: JSON.stringify({ session: false }),
       headers: {

@@ -1,11 +1,13 @@
-import { API_URL } from "../../config";
 import { ICity, INewCity } from "@/types/city.interface";
+import getApiUrl from "@/utils/getApiUrl";
+
+const apiUrl = getApiUrl();
 
 export async function getCities(): Promise<Array<ICity>> {
   let data;
 
   try {
-    const res = await fetch(`${API_URL}/cities`);
+    const res = await fetch(`${apiUrl}/cities`);
     data = await res.json();
   } catch (e) {
     throw new Error("There is an error loading data");
@@ -18,7 +20,7 @@ export async function getCity(id: number): Promise<ICity> {
   let data;
 
   try {
-    const res = await fetch(`${API_URL}/cities`);
+    const res = await fetch(`${apiUrl}/cities`);
     data = await res.json();
     data = data.find((city: ICity) => city.id === id);
   } catch (e) {
@@ -30,7 +32,7 @@ export async function getCity(id: number): Promise<ICity> {
 
 export async function addCity(newCity: INewCity) {
   try {
-    await fetch(`${API_URL}/cities`, {
+    await fetch(`${apiUrl}/cities`, {
       method: "POST",
       body: JSON.stringify(newCity),
       headers: {
@@ -44,7 +46,7 @@ export async function addCity(newCity: INewCity) {
 
 export async function deleteCity(id: number) {
   try {
-    await fetch(`${API_URL}/cities/${id}`, {
+    await fetch(`${apiUrl}/cities/${id}`, {
       method: "DELETE",
     });
   } catch {
