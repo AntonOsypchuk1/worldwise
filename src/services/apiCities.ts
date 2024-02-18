@@ -1,5 +1,5 @@
 import { ICity, INewCity } from "@/types/city.interface";
-import getApiUrl from "@/utils/getApiUrl";
+import { getApiUrl } from "@/utils/getApiUrl";
 
 const apiUrl = getApiUrl();
 

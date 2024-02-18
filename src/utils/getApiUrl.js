@@ -1,14 +1,10 @@
-const API_URLS = {
-  development: "http://localhost:8000",
-  production: "http://test555.demo.jelastic.com:8000",
-  // staging: "https://staging.api.example.com",
-  // Add more environments or conditions as needed
-};
-
-export default function getApiUrl() {
-  // Logic to determine the environment or condition
-  const environment = process.env.NODE_ENV || "development"; // Default to development
-
-  // Retrieve the API URL based on the environment
-  return API_URLS[environment];
+export function getApiUrl(req) {
+  if (typeof window === "undefined") {
+    const protocol = process.env.NODE_ENV === "production" ? "https" : "http";
+    const host = req?.headers.host.replace(/:\d+$/, ""); // Remove port number
+    return `${protocol}://${host}:8000`;
+  } else {
+    const host = window.location.host.replace(/:\d+$/, "");
+    return `${window.location.protocol}//${host}:8000`;
+  }
 }

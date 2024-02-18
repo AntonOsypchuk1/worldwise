@@ -1,5 +1,5 @@
 import { IUser, IUserWithSession } from "@/types/user.interface";
-import getApiUrl from "@/utils/getApiUrl";
+import { getApiUrl } from "@/utils/getApiUrl";
 
 const apiUrl = getApiUrl();
 
