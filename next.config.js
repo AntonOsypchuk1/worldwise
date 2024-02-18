@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   async redirects() {
     return [
       {
-        source: '/',
+        source: "/",
         destination: "/cities",
         permanent: true,
       },
@@ -11,4 +12,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;
