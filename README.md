@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Worldwise
 
-## Getting Started
+### Overview
 
-First, run the development server:
+Worldwise is a study project focused on learning and experimenting with React, TypeScript, and json-server. This project serves as a practical exercise to enhance understanding of modern web development technologies and techniques.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **React**: Utilized for building dynamic and interactive user interfaces.
+- **Next.js**: A React framework for production that makes it easy to build server-side rendered and statically generated applications.
+- **TypeScript**: Implemented for type-safe JavaScript development, ensuring more robust and maintainable code.
+- **json-server**: Used to create a simple and quick mock REST API for development and testing purposes.
 
-You can start editing the page by modifying `app/layout.tsx`. The page auto-updates as you edit the file.
+### Main Packages
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **react**: A JavaScript library for building user interfaces.
+- **react-dom**: Provides DOM-specific methods that can be used at the top level of your app to interact with the DOM.
+- **typescript**: A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+- **json-server**: A full fake REST API with zero coding in less than 30 seconds.
+- **react-router-dom**: A collection of navigational components that compose declaratively with your application.
+- **leaflet**: A JavaScript library for interactive maps, providing mobile-friendly mapping functionality.
 
-## Learn More
+### Installation and Setup
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/AntonOsypchuk1/worldwise.git
+    cd worldwise
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. **Start the json-server:**
+    ```bash
+    npx json-server --watch server/cities.json --port 8000
+    # or
+    npm run server
+    ```
 
-## Deploy on Vercel
+4. **Run the React application:**
+    ```bash
+    npm start
+    # or
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The project showcases basic CRUD (Create, Read, Update, Delete) operations using the mock API provided by json-server. It's a sandbox environment where anybody can freely experiment with React components, state management, Next.js and TypeScript features.
+
+### Contributions
+
+This project is primarily for educational purposes. However, contributions and suggestions for improvement are always welcome!
+
+### License
+
+This project is open-source and available under the MIT License.
