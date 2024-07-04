@@ -1,13 +1,9 @@
-'use client'
+"use client";
 
 import LoginForm from "@/components/login-register/LoginForm";
 
 const Page = () => {
-    return (
-        <>
-            <LoginForm/>
-        </>
-    );
+  return <LoginForm />;
 };
 
 export default Page;

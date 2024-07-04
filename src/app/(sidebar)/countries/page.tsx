@@ -1,13 +1,9 @@
-'use client'
+"use client";
 
 import CountryList from "@/components/country/country-list/CountryList";
 
 const Page = () => {
-  return (
-    <>
-      <CountryList/>
-    </>
-  );
+  return <CountryList />;
 };
 
 export default Page;
