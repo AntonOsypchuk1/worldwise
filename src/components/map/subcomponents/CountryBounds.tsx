@@ -7,7 +7,7 @@ import { useSearchParams } from "next/navigation";
 const CountryBounds = () => {
   const [bounds, setBounds] = useState<LatLngBounds | null>(
     // new LatLngBounds([0, 0], [1, 1]),
-    null,
+    null
   );
 
   const map = useMap();
@@ -25,7 +25,7 @@ const CountryBounds = () => {
     if (bounds) {
       map.flyToBounds(bounds);
     }
-  }, [bounds]);
+  }, [bounds, map]);
 
   if (!bounds || !countryCode || countryCode === "") return null;
 

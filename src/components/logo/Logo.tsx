@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import Link from "next/link";
-import styles from './Logo.module.css'
+import Image from "next/image";
 
 const Logo = () => {
   return (
     <Link href="/">
-      <img src="/logo.png" alt="WorldWise logo" className={styles.logo} />
+      <Image height={50} width={200} src="/logo.png" alt="WorldWise logo" />
     </Link>
   );
 };

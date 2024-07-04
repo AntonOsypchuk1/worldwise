@@ -1,8 +1,9 @@
-'use client'
+"use client";
 
 import styles from "./User.module.css";
-import {useUser} from "@/services/AuthQueries/useUser";
-import {useLogout} from "@/services/AuthQueries/useLogout";
+import { useUser } from "@/services/AuthQueries/useUser";
+import { useLogout } from "@/services/AuthQueries/useLogout";
+import Image from "next/image";
 
 const User = () => {
   const { user, isLoading: isLoadingUser } = useUser();
@@ -14,7 +15,7 @@ const User = () => {
 
   return (
     <div className={styles.user}>
-      <img src={user?.avatar} alt={user?.name} />
+      <Image width={40} height={40} src={user?.avatar} alt={user?.name} />
       <span>Welcome, {user?.name}</span>
       <button onClick={() => logout()} disabled={isLoadingLogout}>
         Logout
